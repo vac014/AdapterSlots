@@ -1,0 +1,16 @@
+system,slo_ms,attainment
+vllm,500,0.2707
+vllm,1000,0.5414
+vllm,2000,1.0
+punica,500,0.2815
+punica,1000,0.5631
+punica,2000,1.0
+slora,500,0.2842
+slora,1000,0.5685
+slora,2000,1.0
+dlora,500,0.2788
+dlora,1000,0.5577
+dlora,2000,1.0
+aspp_c7,500,0.4088
+aspp_c7,1000,0.8175
+aspp_c7,2000,1.0

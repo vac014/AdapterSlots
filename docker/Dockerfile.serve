@@ -1,0 +1,48 @@
+# docker/Dockerfile.serve — AdapterSlots Serving Image
+#
+# For deploying AdapterSlots as an OpenAI-compatible API server.
+# Usage:
+#   docker build -f docker/Dockerfile.serve -t adapter_slots:serve .
+#   docker run --gpus all \
+#     -e AS_MODE=whittle \
+#     -e AS_WAR_TARGET=0.8 \
+#     -e AS_TMAX_MS=5.0 \
+#     -p 8000:8000 \
+#     -v /path/to/models:/models \
+#     adapter_slots:serve \
+#     --model /models/llama-7b \
+#     --enable-lora \
+#     --lora-modules adapter_0=/models/adapters/adapter_r16_k0 \
+#     --max-loras 4 --max-lora-rank 16 \
+#     --port 8000
+
+FROM nvcr.io/nvidia/pytorch:24.01-py3
+
+RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+RUN pip install vllm==0.4.2 || pip install vllm
+RUN pip install flashinfer --extra-index-url https://flashinfer.ai/whl/cu121/torch2.2/ || true
+
+COPY adapter_slots/ /app/adapter_slots/
+COPY setup.py pyproject.toml /app/
+RUN pip install -e /app
+
+RUN PYAIRPORTS_DIR=$(python -c "import site; print(site.getsitepackages()[0])")/pyairports \
+    && mkdir -p "$PYAIRPORTS_DIR" && touch "$PYAIRPORTS_DIR/__init__.py" \
+    && echo "AIRPORT_LIST = []" > "$PYAIRPORTS_DIR/airports.py"
+
+COPY scripts/vllm_serve_adapter_slots.py /app/serve.py
+
+ENV AS_MODE=whittle
+ENV AS_WAR_TARGET=0.8
+ENV AS_TMAX_MS=5.0
+ENV AS_WHITTLE_DELTA_T=0.030
+ENV AS_PI_KP=0.01
+ENV AS_PI_KI=0.001
+ENV AS_PI_UPDATE_MODE=iteration_boundary
+
+EXPOSE 8000
+ENTRYPOINT ["python", "/app/serve.py"]
+CMD ["--model", "/models/llama-7b", "--enable-lora", "--max-loras", "4", "--max-lora-rank", "16", "--port", "8000"]

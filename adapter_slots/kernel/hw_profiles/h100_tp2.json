@@ -1,0 +1,18 @@
+{
+  "hardware": "h100_tp2",
+  "description": "Two H100 NVLink, TP=2, CUDA 12.4. NVLink eliminates allreduce bottleneck.",
+  "tau_iter_ms": 8,
+  "warp_size": 32,
+  "gemm_crossover_n": 8,
+  "crossover_curve": {
+    "4":  {"psi_fuse": 1.08, "psi_gemm": 1.25, "gemm_faster": true},
+    "8":  {"psi_fuse": 1.35, "psi_gemm": 1.75, "gemm_faster": true},
+    "16": {"psi_fuse": 1.40, "psi_gemm": 1.90, "gemm_faster": true},
+    "32": {"psi_fuse": 1.43, "psi_gemm": 2.00, "gemm_faster": true},
+    "64": {"psi_fuse": 1.44, "psi_gemm": 2.05, "gemm_faster": true},
+    "128":{"psi_fuse": 1.45, "psi_gemm": 2.07, "gemm_faster": true},
+    "256":{"psi_fuse": 1.45, "psi_gemm": 2.07, "gemm_faster": true},
+    "512":{"psi_fuse": 1.45, "psi_gemm": 2.07, "gemm_faster": true}
+  },
+  "notes": "Placeholder profile -- replace with E13.6 measured values. TP=2 NVLink reduces tau_iter slightly vs TP=1 due to weight sharding, partially offset by NVLink allreduce."
+}

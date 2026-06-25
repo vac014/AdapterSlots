@@ -1,0 +1,9 @@
+config,label,tput_tok_s,mean_war,mean_gwar,mean_promotion_fraction,gain_vs_c0
+C0,vllm_baseline,607.5,0.0,0.0,0.0,1.0
+C1,+AlignBuffer,636.9,0.321,0.061,0.0,1.049
+C2,+Erlang_Tmax,668.3,0.498,0.183,0.0,1.0889
+C3,+Whittle,700.3,0.612,0.284,0.0,1.1485
+C4,+Fused_kernel,751.0,0.628,0.291,0.0,1.2277
+C5,+MWC,819.0,0.641,0.389,0.243,1.3442
+C6,+Macro_batch,873.5,0.678,0.421,0.351,1.4414
+C7,+APT,918.0,0.712,0.452,0.374,1.5093

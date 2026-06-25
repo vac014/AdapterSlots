@@ -1,0 +1,17 @@
+{
+  "experiment": "E13.8",
+  "hardware": "a6000_tp1",
+  "K": 10,
+  "lambda_total": 7.0,
+  "label": "baseline_vllm",
+  "tput_tok_s": 700.36723316052,
+  "p50_ttft_ms": 33213.793156053405,
+  "p99_ttft_ms": 48995.6191170495,
+  "elapsed_s": 89.78,
+  "n_completed": 500,
+  "n_errors": 0,
+  "mean_war": 0.0,
+  "mean_gwar": 0.0,
+  "mean_promotion_fraction": 0.0,
+  "n_batches": 0
+}

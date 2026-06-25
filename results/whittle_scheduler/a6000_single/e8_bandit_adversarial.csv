@@ -1,0 +1,4 @@
+hardware_label,K,distribution,zipf_alpha,lambda_total,delta_t_ms,tau_iter_ms,policy,war_mean,war_std,pct_oracle,oracle_war,overhead_ms,throughput_tok_s,ttft_p50_ms,ttft_p99_ms,indexability_ok,n_ticks
+a6000_single,4,adversarial,0.9,7.0,30.0,30.0,oracle,0.8186,0.0000,100.0,0.8186,1.4356,119.2,810.0,2010.0,True,2000
+a6000_single,4,adversarial,0.9,7.0,30.0,30.0,threshold,0.8186,0.0000,100.0,0.8186,0.0051,119.2,810.0,2010.0,True,2000
+a6000_single,4,adversarial,0.9,7.0,30.0,30.0,whittle,0.8230,0.0000,100.5,0.8186,0.0121,119.2,810.0,2010.0,True,2000

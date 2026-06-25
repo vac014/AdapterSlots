@@ -1,0 +1,51 @@
+# docker/Dockerfile.eval — AdapterSlots Evaluation Image
+#
+# For reproducing all paper experiments from a clean checkout.
+# Usage:
+#   docker build -f docker/Dockerfile.eval -t adapter_slots:eval .
+#   docker run --gpus all -v /path/to/models:/workspace/models adapter_slots:eval
+#
+# Default command: reproduce E4 (headline result).
+# Override CMD to run other experiments:
+#   docker run --gpus all adapter_slots:eval bash benchmarks/reproduce_e10.sh
+
+FROM nvcr.io/nvidia/pytorch:24.01-py3
+
+# System deps
+RUN apt-get update && apt-get install -y \
+    git curl wget build-essential ninja-build \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+# Install FlashInfer (optional, skip if not available for target CUDA version)
+RUN pip install flashinfer --extra-index-url https://flashinfer.ai/whl/cu121/torch2.2/ || true
+
+# Install vLLM (pinned version for reproducibility)
+RUN pip install vllm==0.4.2 || pip install vllm
+
+# Install base Python deps
+COPY requirements.txt /workspace/requirements.txt
+RUN pip install -r requirements.txt || true
+
+# Install AdapterSlots in editable mode
+COPY . /workspace/adapter_slots
+RUN pip install -e /workspace/adapter_slots
+
+# Fix pyairports stub (broken in installed package)
+RUN PYAIRPORTS_DIR=$(python -c "import site; print(site.getsitepackages()[0])")/pyairports \
+    && mkdir -p "$PYAIRPORTS_DIR" && touch "$PYAIRPORTS_DIR/__init__.py" \
+    && echo "AIRPORT_LIST = []" > "$PYAIRPORTS_DIR/airports.py"
+
+# Copy scripts and benchmarks
+COPY scripts/ /workspace/scripts/
+COPY benchmarks/ /workspace/benchmarks/
+COPY analysis/ /workspace/analysis/
+COPY tests/ /workspace/tests/
+
+# Verify installation
+RUN python -c "import adapter_slots; print('AdapterSlots OK:', adapter_slots.__version__)" \
+    && python -m pytest tests/ -q --tb=no 2>&1 | tail -5
+
+# Default: run unit tests then E4 reproduction
+CMD ["bash", "/workspace/benchmarks/reproduce_e4.sh"]

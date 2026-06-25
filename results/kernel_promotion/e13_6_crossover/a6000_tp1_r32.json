@@ -1,0 +1,48 @@
+{
+  "hardware": "a6000_tp1",
+  "rank": 32,
+  "n_reps": 200,
+  "warmup": 50,
+  "crossover_curve": {
+    "4": {
+      "psi_fuse": 0.7567,
+      "psi_gemm": 1.5866,
+      "gemm_faster": true
+    },
+    "8": {
+      "psi_fuse": 0.7265,
+      "psi_gemm": 1.5189,
+      "gemm_faster": true
+    },
+    "16": {
+      "psi_fuse": 0.6277,
+      "psi_gemm": 1.3476,
+      "gemm_faster": true
+    },
+    "32": {
+      "psi_fuse": 0.6503,
+      "psi_gemm": 1.3353,
+      "gemm_faster": true
+    },
+    "64": {
+      "psi_fuse": 0.6699,
+      "psi_gemm": 1.3457,
+      "gemm_faster": true
+    },
+    "128": {
+      "psi_fuse": 0.6265,
+      "psi_gemm": 1.3888,
+      "gemm_faster": true
+    },
+    "256": {
+      "psi_fuse": 0.888,
+      "psi_gemm": 1.2064,
+      "gemm_faster": true
+    },
+    "512": {
+      "psi_fuse": 0.5386,
+      "psi_gemm": 1.3303,
+      "gemm_faster": true
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "hardware": "a6000_tp2",
+  "description": "Two RTX A6000 PCIe, TP=2, CUDA 12.4. tau_iter dominated by PCIe allreduce.",
+  "tau_iter_ms": 100,
+  "warp_size": 32,
+  "gemm_crossover_n": 16,
+  "crossover_curve": {
+    "4":  {"psi_fuse": 0.95, "psi_gemm": 0.88, "gemm_faster": false},
+    "8":  {"psi_fuse": 1.12, "psi_gemm": 1.20, "gemm_faster": true},
+    "16": {"psi_fuse": 1.27, "psi_gemm": 1.43, "gemm_faster": true},
+    "32": {"psi_fuse": 1.32, "psi_gemm": 1.52, "gemm_faster": true},
+    "64": {"psi_fuse": 1.34, "psi_gemm": 1.57, "gemm_faster": true},
+    "128":{"psi_fuse": 1.35, "psi_gemm": 1.59, "gemm_faster": true},
+    "256":{"psi_fuse": 1.36, "psi_gemm": 1.60, "gemm_faster": true},
+    "512":{"psi_fuse": 1.36, "psi_gemm": 1.60, "gemm_faster": true}
+  },
+  "notes": "Placeholder profile — replace with E13.6 measured values. TP=2 PCIe has slightly lower psi due to allreduce overhead affecting effective compute fraction."
+}

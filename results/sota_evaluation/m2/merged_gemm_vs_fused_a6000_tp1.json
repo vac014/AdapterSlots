@@ -1,0 +1,70 @@
+{
+  "rank16": {
+    "4": {
+      "psi_promote": 1.1479
+    },
+    "8": {
+      "psi_promote": 1.1908
+    },
+    "16": {
+      "psi_promote": 1.2226
+    },
+    "32": {
+      "psi_promote": 1.2944
+    },
+    "64": {
+      "psi_promote": 1.2951
+    },
+    "128": {
+      "psi_promote": 1.3295
+    }
+  },
+  "n_star_rank16": 32,
+  "rank32": {
+    "4": {
+      "psi_promote": 1.3101
+    },
+    "8": {
+      "psi_promote": 1.4358
+    },
+    "16": {
+      "psi_promote": 1.5224
+    },
+    "32": {
+      "psi_promote": 1.5858
+    },
+    "64": {
+      "psi_promote": 1.6139
+    },
+    "128": {
+      "psi_promote": 1.6549
+    }
+  },
+  "n_star_rank32": 4,
+  "rank64": {
+    "4": {
+      "psi_promote": 1.2517
+    },
+    "8": {
+      "psi_promote": 1.3557
+    },
+    "16": {
+      "psi_promote": 1.4315
+    },
+    "32": {
+      "psi_promote": 1.4924
+    },
+    "64": {
+      "psi_promote": 1.5215
+    },
+    "128": {
+      "psi_promote": 1.5223
+    }
+  },
+  "n_star_rank64": 4,
+  "ec": {
+    "psi_promote_n8_r32": 1.4358,
+    "crossover_n_r32": 4,
+    "ec_m2_pass": true
+  }
+}

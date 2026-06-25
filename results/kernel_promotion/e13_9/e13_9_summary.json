@@ -1,0 +1,22 @@
+{
+  "experiment": "E13.9",
+  "hardware": "a6000_tp1",
+  "K": 10,
+  "lambda_total": 7.0,
+  "wgkp_threshold": 16,
+  "macro_n_accum": 2,
+  "mwc_k_hot": 5,
+  "label": "wgkp_compound",
+  "tput_tok_s": 146.4204677914613,
+  "p50_ttft_ms": 33121.94591072521,
+  "p99_ttft_ms": 45886.405849130824,
+  "elapsed_s": 148.53,
+  "n_completed": 175,
+  "n_errors": 25,
+  "mean_war": 0.0,
+  "mean_gwar": 0.44755244755244755,
+  "mean_promotion_fraction": 0.0,
+  "n_batches": 286,
+  "compound_gain": 0.2091,
+  "baseline_tput_tok_s": 700.36723316052
+}
