@@ -1,0 +1,39 @@
+{
+  "config": {
+    "backend": "adapterslots",
+    "mode": "C7",
+    "K": 4,
+    "rank": 64,
+    "target_modules": "all_linear",
+    "request_rate": 300,
+    "dataset": "sharegpt",
+    "pattern": "zipf",
+    "num_prompts": 2000,
+    "warmup": 30,
+    "reps": 1,
+    "tp": 1,
+    "tmax_ms": 90,
+    "wgkp_threshold": 16
+  },
+  "reps": [
+    {
+      "throughput_toks": 1280.0667650313665,
+      "throughput_reqs": 20.04206680911501,
+      "ttft_p50_ms": 44277.377327438444,
+      "ttft_p99_ms": 87126.8024037499,
+      "tbt_p50_ms": 66.60401402041316,
+      "tbt_p99_ms": 490.6464764941484,
+      "tpot_ms": 86.25554915933903,
+      "slo_attainment": 0.0,
+      "n_completed": 2000,
+      "wall_time_s": 99.79010742995888,
+      "seed": 42
+    }
+  ],
+  "summary": {
+    "throughput_toks_mean": 1280.07,
+    "throughput_toks_std": 0.0,
+    "throughput_toks_min": 1280.07,
+    "all_reps_positive": true
+  }
+}

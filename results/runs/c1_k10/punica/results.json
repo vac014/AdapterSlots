@@ -1,0 +1,23 @@
+{
+ "punica_s42": {
+  "tput": 1793.7,
+  "n": 400,
+  "wall": 28.5,
+  "out_tokens": 51200,
+  "batch_cap": 256
+ },
+ "punica_s43": {
+  "tput": 1812.6,
+  "n": 400,
+  "wall": 28.2,
+  "out_tokens": 51200,
+  "batch_cap": 256
+ },
+ "punica_s44": {
+  "tput": 1797.3,
+  "n": 400,
+  "wall": 28.5,
+  "out_tokens": 51200,
+  "batch_cap": 256
+ }
+}

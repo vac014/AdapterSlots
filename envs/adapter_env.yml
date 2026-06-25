@@ -1,0 +1,20 @@
+name: adapter_env
+# Conda environment for AdapterSlots and the vLLM 0.6.3, S-LoRA and Punica
+# baselines (Python 3.10, CUDA 12.4), pinned to requirements.txt:
+#   conda env create -f envs/adapter_env.yml
+#   conda activate adapter_env
+#   pip install -e .
+# To build Punica (deps/punica), point CUDA_HOME at CUDA 12.4 first:
+#   export CUDA_HOME=/usr/local/cuda-12.4
+#   export PATH=$CUDA_HOME/bin:$PATH
+#   export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10.14
+  - pip
+  - pip:
+    - -r ../requirements.txt

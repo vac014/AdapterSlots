@@ -1,0 +1,28 @@
+# Baseline versions for C1 and Table II
+#
+# Every baseline runs on the same RTX A6000 as AdapterSlots, on the same
+# ShareGPT request traces (Zipf-0.9 adapter routing, the same seeds) and the
+# same LLaMA-7B weights. Recipes: benchmarks/sota/REPRODUCE_SOTA.md.
+
+# vLLM 0.6.3: the engine AdapterSlots is built on; same flags as AdapterSlots
+VLLM063_VERSION  = 0.6.3.post1
+VLLM063_ENV      = the AdapterSlots environment (envs/adapter_env.yml)
+
+# vLLM 0.5.0: the vLLM baseline of C1 and Table II
+VLLM050_VERSION  = 0.5.0
+VLLM050_ENV      = venvs/vllm050 (envs/setup_vllm050.sh)
+
+# S-LoRA
+SLORA_REPO       = https://github.com/S-LoRA/S-LoRA.git
+SLORA_DEPS       = deps/slora
+SLORA_ENV        = the AdapterSlots environment, kernels built in place
+
+# Punica
+PUNICA_REPO      = https://github.com/punica-ai/punica.git
+PUNICA_DEPS      = deps/punica (cutlass, flashinfer, nvbench vendored under third_party/)
+PUNICA_ENV       = the AdapterSlots environment, kernels built in place
+
+# dLoRA (OSDI'24), a vLLM 0.1.x fork
+DLORA_REPO       = https://github.com/LLMServe/dLoRA.git
+DLORA_DEPS       = deps/dlora
+DLORA_ENV        = venvs/dlora (envs/setup_dlora.sh), torch 2.1.2+cu121

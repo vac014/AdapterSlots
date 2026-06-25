@@ -1,0 +1,14 @@
+Two-GPU machine used for C2 and the TP=2 Table V setting
+
+GPUs          2 x NVIDIA RTX A6000, 49140 MiB each, PCI bus 00000000:04:00.0 and 00000000:05:00.0
+Interconnect  PCIe through the CPU host bridge (PHB), no NVLink
+CPU affinity  cores 0-31, NUMA node 0, for both GPUs
+Host memory   128 GB
+Driver        580.142
+
+$ nvidia-smi topo -m
+        GPU0    GPU1    CPU Affinity    NUMA Affinity   GPU NUMA ID
+GPU0     X      PHB     0-31            0               N/A
+GPU1    PHB      X      0-31            0               N/A
+
+PHB = connection traversing PCIe as well as a PCIe host bridge (typically the CPU)

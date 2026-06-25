@@ -1,0 +1,17 @@
+{
+ "output_check_mode3": {
+  "mode": 3,
+  "n": 160,
+  "exact": 156,
+  "mean_prefix_frac": 0.9831027754706347
+ },
+ "l3_check": {
+  "tput_l3": 1939.5614590333837,
+  "tput_no_l3": 1832.1334795504292,
+  "speedup": 1.0586354546118089,
+  "promoted_steps_min": 100,
+  "identical": 189,
+  "n": 200,
+  "mean_shared_prefix": 0.9555597933663674
+ }
+}

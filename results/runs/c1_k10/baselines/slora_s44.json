@@ -1,0 +1,39 @@
+{
+  "config": {
+    "backend": "slora",
+    "mode": "C0",
+    "K": 10,
+    "rank": 32,
+    "target_modules": "all_linear",
+    "request_rate": 300.0,
+    "dataset": "sharegpt",
+    "pattern": "zipf",
+    "num_prompts": 400,
+    "warmup": 30,
+    "reps": 1,
+    "tp": 1,
+    "tmax_ms": null,
+    "wgkp_threshold": null
+  },
+  "reps": [
+    {
+      "throughput_toks": 1820.108139337612,
+      "throughput_reqs": 14.343418884413193,
+      "ttft_p50_ms": 8346.912374487147,
+      "ttft_p99_ms": 16984.429698917083,
+      "tbt_p50_ms": 93.51033414714038,
+      "tbt_p99_ms": 340.4377995338291,
+      "tpot_ms": 101.22153721522639,
+      "slo_attainment": 0.0,
+      "n_completed": 400,
+      "wall_time_s": 27.88735400000587,
+      "seed": 44
+    }
+  ],
+  "summary": {
+    "throughput_toks_mean": 1820.11,
+    "throughput_toks_std": 0.0,
+    "throughput_toks_min": 1820.11,
+    "all_reps_positive": true
+  }
+}

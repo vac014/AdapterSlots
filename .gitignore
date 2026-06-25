@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Profiling
+*.nsys-rep
+*.ncu-rep
+*.qdstrm
+*.qdrep
+
+# Large files at the repo root: model weights, adapters, datasets, venvs.
+# Anchored, so the vendored baselines' own models/ packages under deps/ stay tracked.
+/models
+/adapters*
+/datasets/
+/data
+/checkpoints/
+/venvs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Logs
+*.log

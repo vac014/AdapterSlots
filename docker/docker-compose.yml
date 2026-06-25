@@ -1,0 +1,76 @@
+version: "3.8"
+
+# Usage:
+#   cd /path/to/AdapterSlots
+#   docker compose -f docker/docker-compose.yml run --rm adapter_slots bash
+#
+# Override PROJECT_DIR to point at your repo root on the target machine:
+#   PROJECT_DIR=/mnt/nvme/AdapterSlots docker compose -f docker/docker-compose.yml run --rm adapter_slots bash
+
+services:
+  adapter_slots:
+    image: ${ADAPTERSLOTS_IMAGE:-adapter_slots-env:cu124}
+    runtime: nvidia
+    shm_size: '16gb'
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - WORKSPACE=/workspace
+      # Pass through HuggingFace cache so models on the host are reused
+      - HF_HOME=${HF_HOME:-/workspace/models}
+      - TRANSFORMERS_CACHE=${TRANSFORMERS_CACHE:-/workspace/models}
+    volumes:
+      # Bind-mount the project directory as /workspace.
+      # Code edits on the host take effect immediately (editable install).
+      - ${PROJECT_DIR:-..}:/workspace
+    working_dir: /workspace
+    ipc: host
+    ulimits:
+      memlock: -1
+      stack: -1
+      nofile:
+        soft: 1048576
+        hard: 1048576
+      nproc: -1
+    cap_add:
+      - SYS_ADMIN
+      - IPC_LOCK
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    # Remove to run as one-shot command instead
+    stdin_open: true
+    tty: true
+
+  # Separate service for running the vLLM/punica serving stack
+  serve:
+    image: ${ADAPTERSLOTS_IMAGE:-adapter_slots-env:cu124}
+    runtime: nvidia
+    shm_size: '16gb'
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - WORKSPACE=/workspace
+      - HF_HOME=${HF_HOME:-/workspace/models}
+    volumes:
+      - ${PROJECT_DIR:-..}:/workspace
+    working_dir: /workspace
+    ipc: host
+    ulimits:
+      memlock: -1
+      stack: -1
+      nofile:
+        soft: 1048576
+        hard: 1048576
+      nproc: -1
+    cap_add:
+      - SYS_ADMIN
+      - IPC_LOCK
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    ports:
+      - "8000:8000"   # vLLM / punica HTTP
+      - "8265:8265"   # Ray dashboard
+    command: >
+      bash -c "python punica_server/launch.py"

@@ -1,0 +1,390 @@
+{
+ "rank": 32,
+ "unit": "us per kernel",
+ "rows": [
+  {
+   "kernel": "shrink",
+   "K": 16,
+   "B": 100,
+   "width": 5120,
+   "bgmv_us": 39.28234736124674,
+   "best_us": 8.386560281117758,
+   "best": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 2,
+    "num_stages": 1
+   },
+   "second_us": 8.528213500976562,
+   "second": {
+    "BM": 16,
+    "BN": 32,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "shrink",
+   "K": 16,
+   "B": 100,
+   "width": 13824,
+   "bgmv_us": 62.813866933186844,
+   "best_us": 28.489386240641274,
+   "best": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 28.617385228474937,
+   "second": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 128,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "expand",
+   "K": 16,
+   "B": 100,
+   "width": 5120,
+   "bgmv_us": 24.76373354593913,
+   "best_us": 6.468266646067302,
+   "best": {
+    "BM": 16,
+    "BN": 128,
+    "BK": 32,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 6.550186475118002,
+   "second": {
+    "BM": 16,
+    "BN": 64,
+    "BK": 16,
+    "num_warps": 2,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "expand",
+   "K": 16,
+   "B": 100,
+   "width": 13824,
+   "bgmv_us": 46.5442148844401,
+   "best_us": 30.96234639485677,
+   "best": {
+    "BM": 16,
+    "BN": 128,
+    "BK": 32,
+    "num_warps": 8,
+    "num_stages": 1
+   },
+   "second_us": 30.965760548909504,
+   "second": {
+    "BM": 16,
+    "BN": 64,
+    "BK": 16,
+    "num_warps": 2,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "shrink",
+   "K": 16,
+   "B": 160,
+   "width": 5120,
+   "bgmv_us": 64.09727732340495,
+   "best_us": 11.960319677988688,
+   "best": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 12.151467005411785,
+   "second": {
+    "BM": 16,
+    "BN": 32,
+    "BK": 128,
+    "SPLIT_K": 8,
+    "num_warps": 4,
+    "num_stages": 2
+   }
+  },
+  {
+   "kernel": "shrink",
+   "K": 16,
+   "B": 160,
+   "width": 13824,
+   "bgmv_us": 98.28181584676108,
+   "best_us": 31.50165239969889,
+   "best": {
+    "BM": 16,
+    "BN": 32,
+    "BK": 128,
+    "SPLIT_K": 8,
+    "num_warps": 4,
+    "num_stages": 2
+   },
+   "second_us": 31.61600112915039,
+   "second": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "expand",
+   "K": 16,
+   "B": 160,
+   "width": 5120,
+   "bgmv_us": 39.005867640177414,
+   "best_us": 9.250133037567139,
+   "best": {
+    "BM": 16,
+    "BN": 128,
+    "BK": 32,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 9.29792006810506,
+   "second": {
+    "BM": 16,
+    "BN": 256,
+    "BK": 32,
+    "num_warps": 4,
+    "num_stages": 2
+   }
+  },
+  {
+   "kernel": "expand",
+   "K": 16,
+   "B": 160,
+   "width": 13824,
+   "bgmv_us": 71.47520065307619,
+   "best_us": 35.537919998168945,
+   "best": {
+    "BM": 16,
+    "BN": 128,
+    "BK": 32,
+    "num_warps": 8,
+    "num_stages": 1
+   },
+   "second_us": 35.57034810384115,
+   "second": {
+    "BM": 16,
+    "BN": 128,
+    "BK": 32,
+    "num_warps": 8,
+    "num_stages": 2
+   }
+  },
+  {
+   "kernel": "shrink",
+   "K": 8,
+   "B": 100,
+   "width": 5120,
+   "bgmv_us": 39.21237309773763,
+   "best_us": 7.070720195770264,
+   "best": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 7.19871997833252,
+   "second": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 2,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "shrink",
+   "K": 8,
+   "B": 100,
+   "width": 13824,
+   "bgmv_us": 61.06112162272136,
+   "best_us": 18.780159950256348,
+   "best": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 128,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 19.15221373240153,
+   "second": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 128,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 2
+   }
+  },
+  {
+   "kernel": "expand",
+   "K": 8,
+   "B": 100,
+   "width": 5120,
+   "bgmv_us": 24.34901396433512,
+   "best_us": 4.990293184916179,
+   "best": {
+    "BM": 16,
+    "BN": 128,
+    "BK": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 4.991999864578247,
+   "second": {
+    "BM": 16,
+    "BN": 128,
+    "BK": 16,
+    "num_warps": 8,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "expand",
+   "K": 8,
+   "B": 100,
+   "width": 13824,
+   "bgmv_us": 44.00981267293294,
+   "best_us": 18.53439966837565,
+   "best": {
+    "BM": 16,
+    "BN": 128,
+    "BK": 32,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 18.559999465942383,
+   "second": {
+    "BM": 16,
+    "BN": 256,
+    "BK": 32,
+    "num_warps": 4,
+    "num_stages": 2
+   }
+  },
+  {
+   "kernel": "shrink",
+   "K": 4,
+   "B": 100,
+   "width": 5120,
+   "bgmv_us": 38.62186749776205,
+   "best_us": 7.099733352661134,
+   "best": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 7.127040227254232,
+   "second": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 64,
+    "SPLIT_K": 16,
+    "num_warps": 2,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "shrink",
+   "K": 4,
+   "B": 100,
+   "width": 13824,
+   "bgmv_us": 57.39349365234375,
+   "best_us": 12.704426447550457,
+   "best": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 128,
+    "SPLIT_K": 16,
+    "num_warps": 2,
+    "num_stages": 1
+   },
+   "second_us": 12.704426447550457,
+   "second": {
+    "BM": 16,
+    "BN": 16,
+    "BK": 128,
+    "SPLIT_K": 16,
+    "num_warps": 2,
+    "num_stages": 2
+   }
+  },
+  {
+   "kernel": "expand",
+   "K": 4,
+   "B": 100,
+   "width": 5120,
+   "bgmv_us": 24.34048016866048,
+   "best_us": 4.829866488774617,
+   "best": {
+    "BM": 16,
+    "BN": 64,
+    "BK": 16,
+    "num_warps": 2,
+    "num_stages": 1
+   },
+   "second_us": 4.841813246409099,
+   "second": {
+    "BM": 32,
+    "BN": 128,
+    "BK": 32,
+    "num_warps": 8,
+    "num_stages": 1
+   }
+  },
+  {
+   "kernel": "expand",
+   "K": 4,
+   "B": 100,
+   "width": 13824,
+   "bgmv_us": 42.257067362467446,
+   "best_us": 7.787520090738932,
+   "best": {
+    "BM": 32,
+    "BN": 256,
+    "BK": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   },
+   "second_us": 7.808000246683757,
+   "second": {
+    "BM": 16,
+    "BN": 256,
+    "BK": 16,
+    "num_warps": 4,
+    "num_stages": 1
+   }
+  }
+ ]
+}
