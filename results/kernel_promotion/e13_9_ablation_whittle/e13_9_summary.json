@@ -1,0 +1,9 @@
+{
+  "experiment": "E13.9-whittle-only",
+  "hardware": "a6000_tp1",
+  "compound_gain": 1.083,
+  "tput_tok_s": 659.2,
+  "mean_war": 0.4812,
+  "mean_gwar": 0.2103,
+  "mean_promotion_fraction": 0.0
+}

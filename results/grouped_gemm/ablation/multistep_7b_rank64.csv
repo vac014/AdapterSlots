@@ -1,0 +1,6 @@
+arm,tput
+1_vllm,1216.1
+2_as_static_tuned,1686.9
+3_as_static_ms8,2328.0
+4_vllm_ms8,1491.9
+5_vllm_recheck,1244.9

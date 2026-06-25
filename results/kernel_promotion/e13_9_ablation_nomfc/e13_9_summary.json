@@ -1,0 +1,9 @@
+{
+  "experiment": "E13.9-wgkp-nomfc",
+  "hardware": "a6000_tp1",
+  "compound_gain": 1.214,
+  "tput_tok_s": 739.0,
+  "mean_war": 0.6721,
+  "mean_gwar": 0.4103,
+  "mean_promotion_fraction": 0.3741
+}

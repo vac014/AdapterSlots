@@ -1,0 +1,78 @@
+{
+  "A_vllm_stock": {
+    "tag": "A_vllm_stock",
+    "throughput": 716.7682156329896,
+    "wall_time_s": 21.429521657060832,
+    "n_completed": 120,
+    "p50_ttft_ms": 13703.441516961902,
+    "p99_ttft_ms": 18783.843397628516
+  },
+  "B_vllm_ms8": {
+    "tag": "B_vllm_ms8",
+    "throughput": 784.8306070946453,
+    "wall_time_s": 19.57110217306763,
+    "n_completed": 120,
+    "p50_ttft_ms": 11998.816919047385,
+    "p99_ttft_ms": 16931.72533903271
+  },
+  "C_adapterslots_C6_tmax_default": {
+    "tag": "C_adapterslots_C6_tmax_default",
+    "throughput": 691.751891160338,
+    "wall_time_s": 22.204492963850498,
+    "n_completed": 120,
+    "p50_ttft_ms": 13544.024469330907,
+    "p99_ttft_ms": 19505.020424257964
+  },
+  "D_adapterslots_C6_tmax90": {
+    "tag": "D_adapterslots_C6_tmax90",
+    "throughput": 692.8137013948963,
+    "wall_time_s": 22.17046223115176,
+    "n_completed": 120,
+    "p50_ttft_ms": 13573.351678904146,
+    "p99_ttft_ms": 19481.15544486791
+  },
+  "E_adapterslots_C6_tmax90_inprocess": {
+    "tag": "E_adapterslots_C6_tmax90_inprocess",
+    "throughput": 615.9260152418715,
+    "wall_time_s": 24.938060123939067,
+    "n_completed": 120,
+    "p50_ttft_ms": 15753.729751799256,
+    "p99_ttft_ms": 22238.005723804235
+  },
+  "F_adapterslots_C7_tmax90": {
+    "tag": "F_adapterslots_C7_tmax90",
+    "throughput": 684.3396483981074,
+    "wall_time_s": 22.444995019584894,
+    "n_completed": 120,
+    "p50_ttft_ms": 13795.578569173813,
+    "p99_ttft_ms": 19751.985482871532
+  },
+  "G_adapterslots_C6_tmax90_ms8": {
+    "tag": "G_adapterslots_C6_tmax90_ms8",
+    "throughput": 748.1840503377308,
+    "wall_time_s": 20.529707888141274,
+    "n_completed": 120,
+    "p50_ttft_ms": 11822.38089479506,
+    "p99_ttft_ms": 17832.46335014701
+  },
+  "H_adapterslots_C7_tmax90_ms8": {
+    "tag": "H_adapterslots_C7_tmax90_ms8",
+    "throughput": 747.6859015868323,
+    "wall_time_s": 20.54338588891551,
+    "n_completed": 120,
+    "p50_ttft_ms": 11879.72564296797,
+    "p99_ttft_ms": 17849.384516011924
+  },
+  "_meta": {
+    "model": "LLaMA-13B FP16 (no quantization)",
+    "K": 8,
+    "overload_rate": 40,
+    "alpha": 0.9,
+    "seed": 42,
+    "num_prompts": 120,
+    "max_tokens": 128,
+    "tp": 1,
+    "hardware": "1x RTX A6000",
+    "note": "Real measurement on vLLM 0.6.3. A/B are vLLM reference arms. C-H are AdapterSlots arms, each isolating one lever vs D (T_max=90ms baseline)."
+  }
+}

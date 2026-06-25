@@ -1,0 +1,18 @@
+{
+  "hardware": "h100_tp1",
+  "description": "Single H100 SXM5 (Hopper), TP=1, CUDA 12.4. TMA reduces GEMM setup cost.",
+  "tau_iter_ms": 5,
+  "warp_size": 32,
+  "gemm_crossover_n": 8,
+  "crossover_curve": {
+    "4":  {"psi_fuse": 1.10, "psi_gemm": 1.30, "gemm_faster": true},
+    "8":  {"psi_fuse": 1.38, "psi_gemm": 1.80, "gemm_faster": true},
+    "16": {"psi_fuse": 1.42, "psi_gemm": 1.95, "gemm_faster": true},
+    "32": {"psi_fuse": 1.45, "psi_gemm": 2.05, "gemm_faster": true},
+    "64": {"psi_fuse": 1.46, "psi_gemm": 2.10, "gemm_faster": true},
+    "128":{"psi_fuse": 1.47, "psi_gemm": 2.12, "gemm_faster": true},
+    "256":{"psi_fuse": 1.47, "psi_gemm": 2.13, "gemm_faster": true},
+    "512":{"psi_fuse": 1.47, "psi_gemm": 2.13, "gemm_faster": true}
+  },
+  "notes": "Placeholder profile -- replace with E13.6 measured values. H100 wgmma instructions and TMA give substantially higher psi_gemm than Ampere."
+}

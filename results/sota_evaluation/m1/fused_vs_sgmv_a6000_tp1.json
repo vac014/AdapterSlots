@@ -1,0 +1,111 @@
+{
+  "rank16": {
+    "4": {
+      "psi_fuse": 1.0928,
+      "psi_gemm": 1.1424
+    },
+    "8": {
+      "psi_fuse": 1.1617,
+      "psi_gemm": 1.1923
+    },
+    "16": {
+      "psi_fuse": 1.247,
+      "psi_gemm": 1.2293
+    },
+    "32": {
+      "psi_fuse": 1.3344,
+      "psi_gemm": 1.2693
+    },
+    "64": {
+      "psi_fuse": 1.421,
+      "psi_gemm": 1.3016
+    },
+    "128": {
+      "psi_fuse": 1.4613,
+      "psi_gemm": 1.3157
+    },
+    "256": {
+      "psi_fuse": 1.4868,
+      "psi_gemm": 1.3268
+    },
+    "512": {
+      "psi_fuse": 1.4932,
+      "psi_gemm": 1.3087
+    }
+  },
+  "rank32": {
+    "4": {
+      "psi_fuse": 1.1285,
+      "psi_gemm": 1.3334
+    },
+    "8": {
+      "psi_fuse": 1.2025,
+      "psi_gemm": 1.439
+    },
+    "16": {
+      "psi_fuse": 1.2953,
+      "psi_gemm": 1.5283
+    },
+    "32": {
+      "psi_fuse": 1.4365,
+      "psi_gemm": 1.5774
+    },
+    "64": {
+      "psi_fuse": 1.4762,
+      "psi_gemm": 1.6203
+    },
+    "128": {
+      "psi_fuse": 1.5455,
+      "psi_gemm": 1.6324
+    },
+    "256": {
+      "psi_fuse": 1.571,
+      "psi_gemm": 1.6344
+    },
+    "512": {
+      "psi_fuse": 1.5595,
+      "psi_gemm": 1.6472
+    }
+  },
+  "rank64": {
+    "4": {
+      "psi_fuse": 1.1678,
+      "psi_gemm": 1.2539
+    },
+    "8": {
+      "psi_fuse": 1.2946,
+      "psi_gemm": 1.3614
+    },
+    "16": {
+      "psi_fuse": 1.4093,
+      "psi_gemm": 1.4117
+    },
+    "32": {
+      "psi_fuse": 1.5169,
+      "psi_gemm": 1.4725
+    },
+    "64": {
+      "psi_fuse": 1.5996,
+      "psi_gemm": 1.5102
+    },
+    "128": {
+      "psi_fuse": 1.6561,
+      "psi_gemm": 1.5354
+    },
+    "256": {
+      "psi_fuse": 1.6741,
+      "psi_gemm": 1.5408
+    },
+    "512": {
+      "psi_fuse": 1.6959,
+      "psi_gemm": 1.5396
+    }
+  },
+  "ec": {
+    "psi_fuse_n32_r16": 1.3344,
+    "psi_fuse_n16_r32": 1.2953,
+    "threshold": 1.25,
+    "ec_m1a_pass": true,
+    "ec_m1b_pass": true
+  }
+}

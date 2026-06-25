@@ -1,0 +1,16 @@
+{
+  "experiment": "E13.10",
+  "hardware": "a6000_apis",
+  "K": 10,
+  "lambda_total": 14.0,
+  "tput_tok_s": 1667.536,
+  "p50_ttft_ms": 1378.601,
+  "p99_ttft_ms": 1926.195,
+  "elapsed_s": 71.704,
+  "n_completed": 487,
+  "n_errors": 13,
+  "mean_war": 0.7081,
+  "mean_gwar": 0.4412,
+  "pcie_baseline_tput": 704.3,
+  "apis_gain_vs_tp2_pcie": 2.3692
+}

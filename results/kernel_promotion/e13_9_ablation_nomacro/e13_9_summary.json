@@ -1,0 +1,9 @@
+{
+  "experiment": "E13.9-wgkp-nomacro",
+  "hardware": "a6000_tp1",
+  "compound_gain": 1.312,
+  "tput_tok_s": 798.6,
+  "mean_war": 0.7012,
+  "mean_gwar": 0.4287,
+  "mean_promotion_fraction": 0.3741
+}

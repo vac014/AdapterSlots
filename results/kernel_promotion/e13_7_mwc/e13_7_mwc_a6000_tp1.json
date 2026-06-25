@@ -1,0 +1,34 @@
+{
+  "k_hot3_rank16": {
+    "max_abs_error": 1.0,
+    "memory_gb": 1.5,
+    "avg_merge_ms": 39.42469096121689,
+    "ec_error": true,
+    "ec_memory": true,
+    "ec_merge_time": true
+  },
+  "k_hot3_rank32": {
+    "max_abs_error": 1.0,
+    "memory_gb": 1.5,
+    "avg_merge_ms": 7.517181026438872,
+    "ec_error": true,
+    "ec_memory": true,
+    "ec_merge_time": true
+  },
+  "k_hot5_rank16": {
+    "max_abs_error": 1.0,
+    "memory_gb": 1.5,
+    "avg_merge_ms": 7.355553951735298,
+    "ec_error": true,
+    "ec_memory": true,
+    "ec_merge_time": true
+  },
+  "k_hot5_rank32": {
+    "max_abs_error": 1.0,
+    "memory_gb": 1.5,
+    "avg_merge_ms": 7.512890733778477,
+    "ec_error": true,
+    "ec_memory": true,
+    "ec_merge_time": true
+  }
+}

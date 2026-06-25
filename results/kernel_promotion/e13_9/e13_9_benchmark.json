@@ -1,0 +1,9 @@
+{
+  "label": "wgkp_compound",
+  "tput_tok_s": 146.4204677914613,
+  "p50_ttft_ms": 33121.94591072521,
+  "p99_ttft_ms": 45886.405849130824,
+  "elapsed_s": 148.53,
+  "n_completed": 175,
+  "n_errors": 25
+}

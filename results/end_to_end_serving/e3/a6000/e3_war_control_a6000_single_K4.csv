@@ -1,0 +1,8 @@
+hardware_label,K,lambda_total,tmax_config_ms,tmax_eff_ms,tau_iter_ms,war_theory,war_mean,war_p10,war_p90,theory_match,is_staircase_step
+a6000_single,4,7.0,0.0,0.0,30.0,0.0,0.0007,0.0,0.0,True,False
+a6000_single,4,7.0,1.0,30.0,30.0,0.8136,0.0007,0.0,0.0,False,True
+a6000_single,4,7.0,2.0,30.0,30.0,0.8136,0.0007,0.0,0.0,False,True
+a6000_single,4,7.0,5.0,30.0,30.0,0.8136,0.0006,0.0,0.0,False,True
+a6000_single,4,7.0,10.0,30.0,30.0,0.8136,0.0006,0.0,0.0,False,True
+a6000_single,4,7.0,20.0,30.0,30.0,0.8136,0.0007,0.0,0.0,False,True
+a6000_single,4,7.0,50.0,60.0,30.0,0.9653,0.0006,0.0,0.0,False,True

@@ -1,0 +1,20 @@
+{
+  "experiment": "E13.11",
+  "hardware": "a6000_tp1",
+  "K": 10,
+  "lambda_total": 7.0,
+  "label": "wgkp_headline",
+  "tput_tok_s": 930.989,
+  "p50_ttft_ms": 1312.76,
+  "p99_ttft_ms": 1849.145,
+  "elapsed_s": 149.163,
+  "n_completed": 978,
+  "n_errors": 22,
+  "mean_war": 0.7124,
+  "mean_gwar": 0.4581,
+  "mean_promotion_fraction": 0.3892,
+  "n_batches": 1714,
+  "headline_gain": 1.5312,
+  "baseline_tput_tok_s": 608.7,
+  "slo_met": true
+}

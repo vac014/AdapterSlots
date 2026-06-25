@@ -1,0 +1,6 @@
+arm,tput
+1_vllm,1222.4
+2_as_tiled,1298.9
+3_as_static,1596.9
+4_as_plain,1231.9
+5_vllm_recheck,1209.6

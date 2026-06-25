@@ -1,0 +1,39 @@
+{
+  "config": {
+    "backend": "vllm",
+    "mode": "C0",
+    "K": 10,
+    "rank": 64,
+    "target_modules": "all_linear",
+    "request_rate": 300,
+    "dataset": "sharegpt",
+    "pattern": "zipf",
+    "num_prompts": 400,
+    "warmup": 30,
+    "reps": 1,
+    "tp": 1,
+    "tmax_ms": null,
+    "wgkp_threshold": null
+  },
+  "reps": [
+    {
+      "throughput_toks": 1518.4150954109443,
+      "throughput_reqs": 11.943798437905643,
+      "ttft_p50_ms": 20077.431502752006,
+      "ttft_p99_ms": 32426.201771982014,
+      "tbt_p50_ms": NaN,
+      "tbt_p99_ms": NaN,
+      "tpot_ms": NaN,
+      "slo_attainment": 0.0,
+      "n_completed": 400,
+      "wall_time_s": 33.49018338508904,
+      "seed": 43
+    }
+  ],
+  "summary": {
+    "throughput_toks_mean": 1518.42,
+    "throughput_toks_std": 0.0,
+    "throughput_toks_min": 1518.42,
+    "all_reps_positive": true
+  }
+}

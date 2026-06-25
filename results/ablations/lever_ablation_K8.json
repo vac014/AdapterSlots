@@ -1,0 +1,78 @@
+{
+  "A_vllm_stock": {
+    "tag": "A_vllm_stock",
+    "throughput": 716.7682156329896,
+    "wall_time_s": 21.429521657060832,
+    "n_completed": 120,
+    "p50_ttft_ms": 13703.441516961902,
+    "p99_ttft_ms": 18783.843397628516
+  },
+  "B_vllm_ms8": {
+    "tag": "B_vllm_ms8",
+    "throughput": 784.8306070946453,
+    "wall_time_s": 19.57110217306763,
+    "n_completed": 120,
+    "p50_ttft_ms": 11998.816919047385,
+    "p99_ttft_ms": 16931.72533903271
+  },
+  "C_adapterslots_tmax_default": {
+    "tag": "C_adapterslots_tmax_default",
+    "throughput": 866.5029534310398,
+    "wall_time_s": 17.72642544284463,
+    "n_completed": 120,
+    "p50_ttft_ms": 12515.14980616048,
+    "p99_ttft_ms": 15025.964095257223
+  },
+  "D_adapterslots_tmax90": {
+    "tag": "D_adapterslots_tmax90",
+    "throughput": 860.9206616682353,
+    "wall_time_s": 17.84136527776718,
+    "n_completed": 120,
+    "p50_ttft_ms": 12595.356712117791,
+    "p99_ttft_ms": 15147.574132308364
+  },
+  "E_adapterslots_tmax90_inprocess": {
+    "tag": "E_adapterslots_tmax90_inprocess",
+    "throughput": 643.8974027307779,
+    "wall_time_s": 23.85473203472793,
+    "n_completed": 120,
+    "p50_ttft_ms": 18195.514800958335,
+    "p99_ttft_ms": 21158.96563185379
+  },
+  "F_adapterslots_C7_tmax90": {
+    "tag": "F_adapterslots_C7_tmax90",
+    "throughput": 868.1620467945698,
+    "wall_time_s": 17.692549515049905,
+    "n_completed": 120,
+    "p50_ttft_ms": 12489.047637209296,
+    "p99_ttft_ms": 14994.969696737826
+  },
+  "G_adapterslots_tmax90_ms8": {
+    "tag": "G_adapterslots_tmax90_ms8",
+    "throughput": 1008.7100124316352,
+    "wall_time_s": 15.227369423024356,
+    "n_completed": 120,
+    "p50_ttft_ms": 10295.651409775019,
+    "p99_ttft_ms": 12525.206353981048
+  },
+  "H_adapterslots_C7_tmax90_ms8": {
+    "tag": "H_adapterslots_C7_tmax90_ms8",
+    "throughput": 1005.219499596415,
+    "wall_time_s": 15.280244768597186,
+    "n_completed": 120,
+    "p50_ttft_ms": 10326.979506295174,
+    "p99_ttft_ms": 12583.523177541792
+  },
+  "_meta": {
+    "model": "llama-13b-gptq (gptq_marlin INT4 base, fp16 LoRA adapters)",
+    "K": 8,
+    "overload_rate": 40,
+    "alpha": 0.9,
+    "seed": 42,
+    "num_prompts": 120,
+    "max_tokens": 128,
+    "tp": 1,
+    "hardware": "1x RTX A6000",
+    "note": "A/B are vLLM reference arms (no quantization, vanilla deployment). C-H are AS arms with the quantized base held fixed; each isolates exactly one lever vs D. See docs/custom_kernel/kernel.md section 11."
+  }
+}

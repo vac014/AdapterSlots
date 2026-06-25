@@ -1,0 +1,7 @@
+arm,seed,tput,n
+vllm,42,850.4,300
+as_grouped,42,1811.2,300
+vllm,43,859.6,300
+as_grouped,43,1795.3,300
+vllm,44,853.0,300
+as_grouped,44,1748.9,300

@@ -1,0 +1,4 @@
+2 H100 80GB VRAM NVLink
+
+Total server setup:
+48 CPUs | 400GB RAM | 160GB VRAM
